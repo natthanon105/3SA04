@@ -33,7 +33,7 @@ export default function Weather(props) {
     }, [props.zipCode])
     return (
         <View>
-            <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
+            <ImageBackground source={require('../bg.jpg')} style={styles.backdrop} blurRadius={3}>
                 <View style={styles.contain}>
                    <Forecast {...forecastInfo} zipCode={props.zipCode} />
                 </View>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         backgroundColor: 'rgba(10, 10, 10, 0.6)',        
         width: '90%',
-        height: '90%',
+        height: '80%',
         padding: 40,
         borderRadius: 10
     },
